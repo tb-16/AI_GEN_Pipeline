@@ -1,0 +1,30 @@
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Generated videos and scenes
+generated_videos/scenes/*
+generated_videos/graphs/*
+generated_videos/*.mp4
+generated_videos/*.json
+
+# Keep the directory structure but ignore contents
+!generated_videos/scenes/.gitkeep
+!generated_videos/graphs/.gitkeep
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
