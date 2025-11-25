@@ -4,7 +4,9 @@
       "Bash(python test_sora.py:*)",
       "Bash(pip install:*)",
       "Bash(python:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

@@ -36,16 +36,14 @@ Create a `.env` file in the project directory:
 cp .env.example .env
 ```
 
-Edit `.env` and add your API keys:
+Edit `.env` and add your API key:
 
 ```
 OPENAI_API_KEY=sk-your-openai-api-key-here
-ANTHROPIC_API_KEY=sk-your-anthropic-api-key-here
 ```
 
-Get your API keys from:
-- OpenAI (for Sora): https://platform.openai.com/api-keys
-- Anthropic (for Claude): https://console.anthropic.com/
+Get your API key from:
+- OpenAI (for Sora, GPT-4, and TTS): https://platform.openai.com/api-keys
 
 ### 3. Verify Installation
 
@@ -97,7 +95,7 @@ asyncio.run(main())
 
 ### How the Pipeline Works
 
-1. **LLM Planning** - Claude analyzes your lesson request and creates a scene-by-scene plan
+1. **LLM Planning** - GPT-4 analyzes your lesson request and creates a scene-by-scene plan
 2. **Scene Generation**:
    - **SORA scenes**: Generates cinematic video clips (4-12 seconds each)
    - **Graph scenes**: Fetches data visualizations from Our World in Data (5 seconds each)
@@ -276,8 +274,6 @@ cd OWIDChart
 python server.py
 ```
 
-The server can be used with Claude Desktop or other MCP-compatible clients.
-
 ## Project Structure
 
 ```
@@ -299,7 +295,6 @@ VeoLab/
 For more information:
 - [OpenAI Video Generation Guide](https://platform.openai.com/docs/guides/video-generation)
 - [Azure OpenAI Sora Documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/video-generation)
-- [Anthropic Claude API](https://docs.anthropic.com/)
 - [Our World in Data](https://ourworldindata.org/)
 
 ## License
