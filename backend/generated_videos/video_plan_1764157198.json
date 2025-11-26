@@ -1,0 +1,38 @@
+{
+  "title": "Understanding Population in China",
+  "description": "This video explores the population dynamics of China and its implications for education and society.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "sora",
+      "duration": 8,
+      "script": "China, a land of diverse landscapes, showcases bustling cities and serene countryside, reflecting its vast population.",
+      "prompt": "Aerial view of a bustling city in China, showcasing skyscrapers, crowded streets, and traditional Chinese architecture. Transition to serene rural areas with rice paddies and mountains in the background. Include people engaging in daily activities, wearing traditional Chinese clothing. Cinematic style, vibrant colors, 4K quality, silent video."
+    },
+    {
+      "scene_number": 2,
+      "type": "graph",
+      "duration": 5,
+      "script": "China's population growth has been a significant factor influencing its education system.",
+      "chart_slug": "population",
+      "countries": [
+        "China"
+      ],
+      "time_range": "1950..2020"
+    },
+    {
+      "scene_number": 3,
+      "type": "sora",
+      "duration": 12,
+      "script": "Education in China has evolved alongside its population growth, adapting to the needs of its people.",
+      "prompt": "Footage of a modern classroom in China, with diverse students engaged in learning, using technology and traditional methods. Show teachers interacting with students, emphasizing educational materials in Mandarin. Include visuals of school buildings with Chinese architectural elements. Bright and engaging atmosphere, 4K quality, silent video."
+    },
+    {
+      "scene_number": 4,
+      "type": "sora",
+      "duration": 8,
+      "script": "China's commitment to education showcases its drive towards a brighter future for its large population.",
+      "prompt": "Scenes of students participating in extracurricular activities, such as sports and arts, in a Chinese schoolyard. Highlight cultural elements like calligraphy and traditional music being taught. Include joyful interactions among students. Warm lighting, lively atmosphere, 4K quality, silent video."
+    }
+  ]
+}

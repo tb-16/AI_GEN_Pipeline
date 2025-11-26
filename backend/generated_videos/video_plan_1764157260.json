@@ -1,0 +1,38 @@
+{
+  "title": "Understanding China's Population and Education",
+  "description": "This video explores the population dynamics of China and its impact on education, tailored for Pre-GCSE students.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "sora",
+      "duration": 8,
+      "script": "In China, the population growth shapes educational opportunities and challenges for millions of students.",
+      "prompt": "A bustling street scene in a Chinese city, showcasing diverse groups of students walking to school, traditional and modern architecture, vibrant market stalls, and greenery, capturing the essence of urban China."
+    },
+    {
+      "scene_number": 2,
+      "type": "graph",
+      "duration": 5,
+      "script": "China's population growth rates have been significant over the past decades.",
+      "chart_slug": "population-growth-rates",
+      "countries": [
+        "China"
+      ],
+      "time_range": "1950..2020"
+    },
+    {
+      "scene_number": 3,
+      "type": "sora",
+      "duration": 12,
+      "script": "Education levels in China have improved significantly, reflecting the population's growth.",
+      "prompt": "Classroom scene in a Chinese school, students engaged in learning, diverse ages, modern educational tools, teacher interacting with students, bright and colorful environment showcasing educational progress in China."
+    },
+    {
+      "scene_number": 4,
+      "type": "sora",
+      "duration": 8,
+      "script": "The mean years of schooling have increased, allowing more students access to education.",
+      "prompt": "A serene view of a university campus in China, students studying outdoors, traditional Chinese architecture in the background, trees and flowers in bloom, symbolizing growth and knowledge."
+    }
+  ]
+}

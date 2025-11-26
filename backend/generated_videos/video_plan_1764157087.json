@@ -1,0 +1,38 @@
+{
+  "title": "Exploring the Population of China",
+  "description": "A short educational video focusing on the population of China, ideal for Pre-GCSE students.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "sora",
+      "duration": 8,
+      "script": "China is home to the world's largest population, deeply influencing its culture and economy.",
+      "prompt": "Aerial view of a bustling city in China, showcasing skyscrapers, traditional temples, and busy streets filled with people, vibrant markets, and cultural festivities."
+    },
+    {
+      "scene_number": 2,
+      "type": "graph",
+      "duration": 5,
+      "script": "China's population has seen remarkable growth over the last few decades.",
+      "chart_slug": "population",
+      "countries": [
+        "China"
+      ],
+      "time_range": "1960..2020"
+    },
+    {
+      "scene_number": 3,
+      "type": "sora",
+      "duration": 12,
+      "script": "The population density in urban areas creates a unique lifestyle and challenges.",
+      "prompt": "Scenes of crowded urban neighborhoods in China, with people commuting on public transport, traditional street food stalls, and children playing in parks, showcasing daily life."
+    },
+    {
+      "scene_number": 4,
+      "type": "sora",
+      "duration": 8,
+      "script": "China's diverse population includes many ethnic groups, each contributing to its rich culture.",
+      "prompt": "Cultural festival in China, featuring people in traditional costumes, performing dances, showcasing cuisine, and vibrant decorations, highlighting the country's ethnic diversity."
+    }
+  ]
+}

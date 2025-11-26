@@ -1,0 +1,61 @@
+{
+  "title": "Global Poverty Reduction: A Journey of Hope",
+  "description": "This educational video explores the significant decline in global poverty over the past 30 years, highlighting inspiring stories of growth and opportunity.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "sora",
+      "duration": 8,
+      "script": "In rural China, communities are bustling with activity, showcasing their resilience and determination in overcoming poverty.",
+      "prompt": "Vibrant scenes of a rural Chinese village, with people engaging in daily activities, traditional homes, and lush green landscapes, capturing the essence of community life."
+    },
+    {
+      "scene_number": 2,
+      "type": "graph",
+      "duration": 5,
+      "script": "Poverty rates have significantly declined across the globe over the last 30 years.",
+      "chart_slug": "share-of-population-in-extreme-poverty",
+      "countries": [
+        "China",
+        "India",
+        "Brazil"
+      ],
+      "time_range": "1990..2020"
+    },
+    {
+      "scene_number": 3,
+      "type": "sora",
+      "duration": 8,
+      "script": "Children in rural China are receiving better education and healthcare, paving the way for a brighter future.",
+      "prompt": "Footage of children in a rural Chinese school, laughing and learning in a bright classroom with traditional Chinese decor, showing engaged teachers and students."
+    },
+    {
+      "scene_number": 4,
+      "type": "sora",
+      "duration": 8,
+      "script": "Local markets are thriving as families are able to afford basic necessities and invest in their businesses.",
+      "prompt": "Scenes from a bustling local market in rural China, with vendors selling fresh produce and handmade goods, showcasing the vibrant community life."
+    },
+    {
+      "scene_number": 5,
+      "type": "sora",
+      "duration": 8,
+      "script": "Economic opportunities are expanding, helping families rise above the challenges of poverty.",
+      "prompt": "Footage of small business owners in rural China, proudly showcasing their shops and interacting with customers, demonstrating the spirit of entrepreneurship."
+    },
+    {
+      "scene_number": 6,
+      "type": "sora",
+      "duration": 8,
+      "script": "Infrastructure improvements are connecting communities, facilitating trade and growth.",
+      "prompt": "Visuals of newly constructed roads and bridges in rural China, with people traveling and transporting goods, highlighting advancements in infrastructure."
+    },
+    {
+      "scene_number": 7,
+      "type": "sora",
+      "duration": 8,
+      "script": "The future is bright, as economic growth continues to inspire hope and resilience in communities across China.",
+      "prompt": "Inspiring scenes of families celebrating together in rural China during a festival, showcasing cultural traditions and a sense of unity, with colorful decorations and happy faces."
+    }
+  ]
+}

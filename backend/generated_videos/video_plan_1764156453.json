@@ -1,0 +1,42 @@
+{
+  "title": "The History of Poverty in China",
+  "description": "An educational exploration of the historical context and current status of poverty in China, suitable for Pre-GCSE students.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "sora",
+      "duration": 8,
+      "script": "Explore the landscapes of rural China, where poverty has shaped the lives of many families throughout history.",
+      "prompt": "A panoramic view of rural China, showcasing traditional Chinese houses and rice fields, with local farmers working in the fields, under a bright blue sky, capturing the essence of rural life."
+    },
+    {
+      "scene_number": 2,
+      "type": "graph",
+      "duration": 5,
+      "script": "China has seen a significant reduction in extreme poverty over the past few decades.",
+      "chart_slug": "share-of-population-in-extreme-poverty",
+      "countries": [
+        "China"
+      ],
+      "time_range": "1990..2020"
+    },
+    {
+      "scene_number": 3,
+      "type": "sora",
+      "duration": 12,
+      "script": "Meet families in rural China as they discuss the impact of economic reforms on their lives and communities.",
+      "prompt": "Intimate interviews with families in a Chinese village, showing their daily routines, children playing, and parents discussing the changes in their lives due to economic growth, in a warm, inviting atmosphere."
+    },
+    {
+      "scene_number": 4,
+      "type": "graph",
+      "duration": 5,
+      "script": "The GDP growth in China has played a crucial role in reducing poverty levels.",
+      "chart_slug": "gdp-growth",
+      "countries": [
+        "China"
+      ],
+      "time_range": "1990..2020"
+    }
+  ]
+}

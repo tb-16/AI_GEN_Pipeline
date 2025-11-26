@@ -1,0 +1,38 @@
+{
+  "title": "Understanding Poverty in China",
+  "description": "This educational video explores the challenges of poverty in China, highlighting key statistics and real-life examples.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "sora",
+      "duration": 8,
+      "script": "In rural China, many families still struggle with poverty, impacting their daily lives and futures.",
+      "prompt": "Aerial view of a rural Chinese village with traditional houses, rice fields, and families working in the fields, showcasing the landscape and lifestyle, vibrant colors, bright daylight, professional documentary style, silent video only."
+    },
+    {
+      "scene_number": 2,
+      "type": "graph",
+      "duration": 5,
+      "script": "A significant portion of the Chinese population lives in extreme poverty, illustrating the ongoing challenge.",
+      "chart_slug": "share-of-population-in-extreme-poverty",
+      "countries": [
+        "China"
+      ],
+      "time_range": "2000..2020"
+    },
+    {
+      "scene_number": 3,
+      "type": "sora",
+      "duration": 12,
+      "script": "Education plays a crucial role in lifting families out of poverty, as seen in various communities.",
+      "prompt": "Footage of children in a rural Chinese classroom, engaged in learning with a teacher, highlighting their enthusiasm, traditional Chinese school setting, colorful classroom decorations, bright daylight, professional documentary style, silent video only."
+    },
+    {
+      "scene_number": 4,
+      "type": "sora",
+      "duration": 8,
+      "script": "Efforts to improve living conditions show hope for the future, but challenges remain in eradicating poverty.",
+      "prompt": "Scenes of community development projects in rural China, such as building homes and infrastructure, local workers collaborating, hope and determination reflected in their faces, vibrant atmosphere, sunny day, professional documentary style, silent video only."
+    }
+  ]
+}

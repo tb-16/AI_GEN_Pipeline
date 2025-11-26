@@ -53,6 +53,24 @@ python sora_video_generator.py
 
 ## Usage
 
+### Run Backend + Frontend
+
+1. Start the backend API server so the frontend can trigger the pipeline and serve generated videos:
+
+```bash
+cd backend
+python api_server.py
+```
+
+2. Launch the frontend dev server (Vite defaults to `http://localhost:5173`):
+
+```bash
+cd frontend
+npm run dev
+```
+
+Once both servers are running, you can control the pipeline through the frontend UI.
+
 ## Educational Video Pipeline (Quick Start)
 
 The fastest way to create educational videos:

@@ -1,0 +1,42 @@
+{
+  "title": "Renewable Energy Trends in China",
+  "description": "Explore the rise of renewable energy and electricity generation trends in China, suitable for Pre-GCSE students.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "sora",
+      "duration": 8,
+      "script": "China is leading the world in renewable energy innovations and installations.",
+      "prompt": "Aerial view of solar panels in a vast field in rural China, with nearby mountains and traditional Chinese houses, bright sunlight illuminating the scene, professional documentary style, 4K quality, silent video with no audio"
+    },
+    {
+      "scene_number": 2,
+      "type": "graph",
+      "duration": 5,
+      "script": "China's renewable energy consumption has increased significantly in recent years.",
+      "chart_slug": "modern-renewable-energy-consumption",
+      "countries": [
+        "China"
+      ],
+      "time_range": "2000..2020"
+    },
+    {
+      "scene_number": 3,
+      "type": "sora",
+      "duration": 8,
+      "script": "Electricity generation from renewable sources is reshaping China's energy landscape.",
+      "prompt": "Footage of a bustling city in China with visible wind turbines and solar panels integrated into buildings, showcasing a modern urban environment, diverse people going about their day, professional documentary style, 4K quality, silent video with no audio"
+    },
+    {
+      "scene_number": 4,
+      "type": "graph",
+      "duration": 5,
+      "script": "Electricity generation in China shows a growing share from renewable sources.",
+      "chart_slug": "renewable-share-energy",
+      "countries": [
+        "China"
+      ],
+      "time_range": "2000..2020"
+    }
+  ]
+}

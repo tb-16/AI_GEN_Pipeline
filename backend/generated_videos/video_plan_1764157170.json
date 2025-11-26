@@ -1,0 +1,38 @@
+{
+  "title": "Understanding the Population of England",
+  "description": "A short educational video exploring the population dynamics of England, suitable for Pre-GCSE students.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "sora",
+      "duration": 8,
+      "script": "The population of England is diverse, with cities bustling and rural areas maintaining their charm.",
+      "prompt": "Aerial view of a vibrant urban area in England, showcasing modern buildings, parks, and people interacting in the streets, mixed with shots of serene rural landscapes with traditional English cottages, all under a clear blue sky."
+    },
+    {
+      "scene_number": 2,
+      "type": "graph",
+      "duration": 5,
+      "script": "The world population has seen significant growth over the last century.",
+      "chart_slug": "population-growth-rates",
+      "countries": [
+        "England"
+      ],
+      "time_range": "1950..2020"
+    },
+    {
+      "scene_number": 3,
+      "type": "sora",
+      "duration": 12,
+      "script": "Cities like London are home to millions, showcasing rich cultural diversity.",
+      "prompt": "Footage of bustling city life in London, with people from various backgrounds, iconic landmarks like the Tower Bridge and the London Eye, public transport with double-decker buses, and street performers, illustrating the metropolitan lifestyle."
+    },
+    {
+      "scene_number": 4,
+      "type": "sora",
+      "duration": 8,
+      "script": "Meanwhile, England's countryside offers a quieter lifestyle, rich in nature and history.",
+      "prompt": "Scenic views of the English countryside with rolling hills, sheep grazing, and historical landmarks like Stonehenge in the distance, showcasing the beauty of rural England while people engage in outdoor activities like hiking and picnicking."
+    }
+  ]
+}

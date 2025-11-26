@@ -2,6 +2,24 @@
 
 ## Quick Start
 
+Before running the script you must start the backend API server and frontend so the generated video can be served:
+
+1. Start backend API:
+
+```bash
+cd backend
+python api_server.py
+```
+
+2. Start the frontend dev server (runs on `localhost:5173`):
+
+```bash
+cd frontend
+npm run dev
+```
+
+3. Run the pipeline example:
+
 ```python
 python educational_video_pipeline_openai_only.py
 ```
