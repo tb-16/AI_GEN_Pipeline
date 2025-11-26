@@ -64,7 +64,7 @@ class EducationalVideoPipelineOpenAI:
             "climate": ["temperature-anomaly", "climate-change-impacts"],
             "education": ["mean-years-of-schooling", "literacy-rates"],
             "health": ["child-mortality", "maternal-mortality"],
-            "poverty": ["share-of-population-in-extreme-poverty", "poverty-gap-index"],
+            "poverty": ["share-of-population-in-extreme-poverty", "total-population-living-in-extreme-poverty-by-world-region"],
             "democracy": ["democracy-index", "electoral-democracy"],
             "energy": ["modern-renewable-energy-consumption", "renewable-share-energy", "electricity-generation"],
             "inequality": ["economic-inequality-gini-index", "income-inequality"],
@@ -128,7 +128,7 @@ Return a JSON object with a "topics" key containing an array of topic strings.
 Example: {{"topics": ["renewable energy", "co2 emissions"]}}"""
 
             topics_response = self.openai_client.chat.completions.create(
-                model="gpt-4-turbo-preview",
+                model="gpt-4o-mini",
                 messages=[{"role": "user", "content": topics_prompt}],
                 response_format={"type": "json_object"},
                 temperature=0.3
@@ -245,7 +245,7 @@ Make the video engaging and educational. Mix SORA and graph scenes appropriately
 Remember: Use ONLY the exact chart slugs from the provided list. Do not invent new slugs."""
 
         response = self.openai_client.chat.completions.create(
-            model="gpt-4-turbo-preview",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": "You are an educational video planning assistant. Always respond with valid JSON only."},
                 {"role": "user", "content": planning_prompt}
@@ -920,7 +920,13 @@ Return ONLY the shortened script text, nothing else."""
             num_scenes: Total number of scenes (default: 6)
             graph_proportion: Proportion of scenes that are graphs (default: 0.2 = 20%)
             enable_graphs: Whether to include OWID graphs (default: True)
+                Note: Automatically set to False if graph_proportion is 0.0
         """
+        # Automatically disable graphs if proportion is 0.0 (corresponds to "None" frequency)
+        if graph_proportion == 0.0:
+            enable_graphs = False
+            print("[INFO] Graph proportion is 0.0, disabling graphs (enable_graphs=False)")
+
         print("\n" + "="*60)
         print("EDUCATIONAL VIDEO PIPELINE (OpenAI Only)")
         print("="*60 + "\n")
@@ -982,8 +988,53 @@ Return ONLY the shortened script text, nothing else."""
             }
 
 
+def segment_seconds_to_scene_count(
+    segment_seconds: int,
+    scene_duration_seconds: int = 6,
+    min_scenes: int = 4,
+    max_scenes: int = 10,
+) -> int:
+    """
+    Convert a preferred segment duration (configurable via UI slider) into
+    the number of scenes expected by the video pipeline.
+
+    Frontend slider values range from 24s-60s in 6s increments
+    (≈4-10 scenes with each scene lasting ~6 seconds).
+    """
+    if segment_seconds <= 0 or scene_duration_seconds <= 0:
+        return min_scenes
+
+    approximate_scenes = round(segment_seconds / scene_duration_seconds)
+    return max(min_scenes, min(max_scenes, approximate_scenes))
+
+
+GRAPH_PROPORTION_BY_FREQUENCY = {
+    "None": 0.0,
+    "Few": 0.2,
+    "Moderate": 0.4,
+    "Many": 0.6,
+    "Only Data": 1.0
+}
+
+
+def graph_proportion_from_frequency(frequency: str, default: float = 0.2) -> float:
+    """Return the configured graph proportion for a UI frequency value."""
+    if not frequency:
+        return default
+    return GRAPH_PROPORTION_BY_FREQUENCY.get(frequency, default)
+
 async def main():
-    """Example usage of the educational video pipeline."""
+    """
+    Example usage of the educational video pipeline.
+
+    NOTE: In production the following parameters are supplied by the frontend form
+    (see `frontend/src/pages/Home.jsx` + `TeacherContextForm.jsx`):
+      • `lesson_request` → built from Subject + Topic/Concept + Level fields.
+      • `num_scenes` → derived from the preferred video length slider (~6s per scene).
+      • `graph_proportion` → mapped from the Graph Frequency select options.
+      • `enable_graphs` → auto-disabled when Graph Frequency is set to "None".
+      • `output_filename` → determined by the frontend when the teacher exports a video.
+    """
     print("\n" + "="*60)
     print("EDUCATIONAL VIDEO PIPELINE")
     print("="*60)
@@ -998,18 +1049,28 @@ async def main():
 
     pipeline = EducationalVideoPipelineOpenAI()
 
-    # Example 1: Standard video with graphs (6 scenes, 20% graphs)
-    lesson_request = """
-    Create a short educational video about poverty reduction in rural China.
-    Show how poverty rates have declined over the past decades.
-    Make it engaging with specific details and facts.
-    """
+    # Simulated payload coming from the frontend (mirrors default form values)
+    frontend_payload = {
+        "lessonRequest": """
+Create a short educational video about poverty reduction in rural China.
+Show how poverty rates have declined over the past decades.
+Make it engaging with specific details and facts.
+Make the lesson appropriate for a Lower Secondary student.
+""",
+        "preferredSegmentSeconds": 36,          # Slider value (4–10 scenes at ~6s each)
+        "graphFrequency": "Few",                # Graph frequency select
+        "outputFilename": "china_poverty_education.mp4"
+    }
+
+    lesson_request = frontend_payload["lessonRequest"]
+    num_scenes = segment_seconds_to_scene_count(frontend_payload["preferredSegmentSeconds"])
+    graph_proportion = graph_proportion_from_frequency(frontend_payload["graphFrequency"])
 
     result = await pipeline.generate_video(
         lesson_request=lesson_request,
-        output_filename="china_poverty_education.mp4",
-        num_scenes=6,
-        graph_proportion=0.2,  # 20% graphs = ~1 graph scene
+        output_filename=frontend_payload["outputFilename"],
+        num_scenes=num_scenes,
+        graph_proportion=graph_proportion,
         enable_graphs=True
     )
 

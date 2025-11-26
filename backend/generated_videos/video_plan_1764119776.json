@@ -1,0 +1,38 @@
+{
+  "title": "Understanding Poverty in China",
+  "description": "An educational video exploring the state of poverty in China, focusing on its causes, effects, and recent trends.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "sora",
+      "duration": 8,
+      "script": "In China, millions have lifted themselves out of poverty through hard work and government initiatives.",
+      "prompt": "Aerial view of a Chinese village transitioning from poverty to prosperity, showcasing small businesses, farmers, and local markets, with traditional Chinese architecture and lush green fields, vibrant colors, professional documentary style, 4K quality, silent video only."
+    },
+    {
+      "scene_number": 2,
+      "type": "graph",
+      "duration": 5,
+      "script": "China has made significant progress in reducing extreme poverty over the years.",
+      "chart_slug": "share-of-population-in-extreme-poverty",
+      "countries": [
+        "China"
+      ],
+      "time_range": "1990..2020"
+    },
+    {
+      "scene_number": 3,
+      "type": "sora",
+      "duration": 12,
+      "script": "Education plays a crucial role in alleviating poverty, empowering individuals in China.",
+      "prompt": "Classroom setting in a rural Chinese school, children engaged in learning, teachers interacting with students, displaying traditional Chinese educational materials, bright and cheerful atmosphere, capturing moments of curiosity and joy, professional documentary style, 4K quality, silent video only."
+    },
+    {
+      "scene_number": 4,
+      "type": "sora",
+      "duration": 8,
+      "script": "Government programs and community support are vital in the fight against poverty in China.",
+      "prompt": "Community meeting in a rural Chinese village, locals discussing poverty alleviation initiatives, traditional Chinese clothing visible, banners promoting local programs, warm community atmosphere, professional documentary style, 4K quality, silent video only."
+    }
+  ]
+}

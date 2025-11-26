@@ -1,0 +1,42 @@
+{
+  "title": "Understanding Poverty in China",
+  "description": "This educational video explores the current state of poverty in China, focusing on statistics and real-life examples.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "sora",
+      "duration": 8,
+      "script": "Poverty in China has seen significant changes over the years, affecting millions of lives.",
+      "prompt": "Aerial view of a rural Chinese village, showcasing traditional houses and farming landscapes, with people working in fields, demonstrating life in poverty-stricken areas of China."
+    },
+    {
+      "scene_number": 2,
+      "type": "graph",
+      "duration": 5,
+      "script": "The share of the population in extreme poverty has decreased significantly in China over the years.",
+      "chart_slug": "share-of-population-in-extreme-poverty",
+      "countries": [
+        "China"
+      ],
+      "time_range": "1990..2020"
+    },
+    {
+      "scene_number": 3,
+      "type": "sora",
+      "duration": 12,
+      "script": "Despite progress, poverty still exists, affecting access to education and healthcare.",
+      "prompt": "Footage of children in a rural classroom in China, showing them studying, with limited resources, and a teacher engaging with students, highlighting the challenges faced in education due to poverty."
+    },
+    {
+      "scene_number": 4,
+      "type": "graph",
+      "duration": 5,
+      "script": "The poverty gap index indicates ongoing challenges for those still living in poverty in China.",
+      "chart_slug": "poverty-gap-index",
+      "countries": [
+        "China"
+      ],
+      "time_range": "1990..2020"
+    }
+  ]
+}
