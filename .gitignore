@@ -3,6 +3,7 @@
 *.env
 .venv
 *.venv
+AI_GEN_Pipeline\frontend\node_modules
 node_modules/
 node_modules/*
 *node_modules
